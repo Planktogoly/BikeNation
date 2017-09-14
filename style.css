@@ -1,0 +1,63 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    background-color: rgba(21, 50, 67, 0.5);
+}
+
+nav #logo {
+  
+}
+
+nav #menu ol {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   height: 100%;
+   display: flex;
+}
+
+nav #menu ol li {
+    position: relative;
+    height: 100%;
+    line-height: 80px;
+    text-align: center;
+}
+
+nav #menu ol li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    height: 100%;
+    width: 100px;
+    display: block;
+}
+
+nav #menu ol ol {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    flex-direction: column;
+    display: none;
+}
+
+nav #menu ol ol li {
+    line-height: 1; 
+    text-align: left;
+    /* Vertical Center Text in Li */
+}
+
+nav #menu ol ol li a {
+    height: auto;
+    padding: 15px;
+    display: block;
+}
+
+nav #menu ol li a:hover {
+    background-color: rgba(21, 50, 67, 0.7);
+}
+
+nav #menu ol li:hover + ol {
+    display: block;
+}
