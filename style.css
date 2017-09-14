@@ -1,10 +1,21 @@
+.wrapper {
+    width: 100%;
+    max-width: 1400px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
 nav {
-    display: flex;
-    justify-content: space-between;
     position: fixed;
     height: 80px;
     width: 100%;
     background-color: rgba(21, 50, 67, 0.5);
+    font-family: "Roboto", sans-serif;
+}
+
+nav .wrapper {
+    display: flex;
+    justify-content: space-between;
 }
 
 nav #logo {
@@ -35,29 +46,33 @@ nav #menu ol li a {
 }
 
 nav #menu ol ol {
-    position: absolute;
     left: 0;
     top: 100%;
     flex-direction: column;
-    display: none;
+    background-color: rgba(21, 50, 67, 0.5);
+    height: auto;   
+    position: absolute;
 }
 
 nav #menu ol ol li {
     line-height: 1; 
     text-align: left;
+    height: auto;
+    display: none;
     /* Vertical Center Text in Li */
 }
 
 nav #menu ol ol li a {
-    height: auto;
-    padding: 15px;
     display: block;
+    padding: 20px;
+    width: auto;
 }
 
-nav #menu ol li a:hover {
+nav #menu ol li:hover {
     background-color: rgba(21, 50, 67, 0.7);
 }
 
-nav #menu ol li:hover + ol {
+nav #menu ol li:hover ol li {
     display: block;
 }
+
