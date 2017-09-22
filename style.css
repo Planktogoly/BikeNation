@@ -117,10 +117,24 @@ header {
     height: 300px;
 }
 
-/* footer {
+#slider {
+    height: 500px;
+    background-color: #95a5a6;
+}
+
+#soorten-fietsen #container {
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content: flex-start;
+}
+
+#soorten-fietsen #container .card {
+    width: 340px;
+    height: 340px;
+}
+
+footer {
     background-color: #bdc3c7;
-    height: 120px;
-    top: 100%;
-    margin-top: -120px;
-} */
+    height: 300px;
+}
 
