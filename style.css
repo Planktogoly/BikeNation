@@ -1,3 +1,7 @@
+body, html {
+    background-color: #eee;
+}
+
 .wrapper {
     width: 100%;
     height: 100%;
@@ -14,7 +18,7 @@ nav {
     position: fixed;
     height: 80px;
     width: 100%;
-    background-color: rgba(21, 50, 67, 0.5);
+    background-color: #95a5a6;
     font-family: "Roboto", sans-serif;
     z-index: 1000;
 }
@@ -55,7 +59,7 @@ nav #menu ol ol {
     left: 0;
     top: 100%;
     flex-direction: column;
-    background-color: rgba(21, 50, 67, 0.5);
+    background-color: #7f8c8d;
     height: auto;   
     position: absolute;
 }
@@ -75,7 +79,7 @@ nav #menu ol ol li a {
 }
 
 nav #menu ol li:hover {
-    background-color: rgba(21, 50, 67, 0.7);
+    background-color: #7f8c8d;
 }
 
 nav #menu ol li:hover ol li {
@@ -86,34 +90,19 @@ header {
     position: relative;
     top: 0;
     height: 600px;
-    background-color:black;
+    background-color: #bdc3c7;
     width: 100%;
-    background-image: url(headerbg.jpg);
 }
 
-#header-content {
-    position: absolute;
-    left: 150px;
-    top: 50%;
-    transform: translateY(-50%);
+#contact {
+    height: 100px;
+    background-color: #95a5a6;
 }
 
-#header-content h1, h3 {
-    margin: 0;
-}
-
-#header-content h1 {
-    color: rgba(241, 136, 5, 1);
-    font-size: 60pt;
-}
-
-#header-content h3 {
-    color: #ffffff;
-    font-size: 20pt;
-    font-weight: 400;
-    font-family: "Opens Sans", sans-serif;
-    font-style: italic;
-}
-
-
+/* footer {
+    background-color: #bdc3c7;
+    height: 120px;
+    top: 100%;
+    margin-top: -120px;
+} */
 
