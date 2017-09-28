@@ -7,14 +7,38 @@ body>*:not(header):not(footer):not(nav) {
 }
 
 .wrapper {
-    width: 100%;
+    width: 95%;
+    height: 100%;
     max-width: 1400px;
     margin-left: 50%;
     transform: translateX(-50%);
 }
 
-h1, h3 {
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.row > div {
+    padding: 4px;
+    box-sizing: border-box; 
+}
+
+.row-4 > div{
+    width: 25%;
+}
+
+h* {
     font-family: "Roboto", sans-serif;
+}
+
+p, a, span {
+    font-family: "Open Sans", sans-serif
+}
+
+a{
+    text-decoration: none;
 }
 
 h3 {
@@ -29,12 +53,11 @@ h3 {
 }
 
 nav {
-    position: fixed;
-    height: 80px;
+    position: absolute;
     width: 100%;
-    background-color: #95a5a6;
     font-family: "Roboto", sans-serif;
     z-index: 1000;
+    height: 80px;
 }
 
 nav .wrapper {
@@ -42,61 +65,61 @@ nav .wrapper {
     justify-content: space-between;
 }
 
-nav #logo {
-  
+nav #menu {
+    height: inherit;
+}
+
+nav img {
+    position: relative;
+    width: auto;
+    height: 30%;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 nav #menu ol {
-   list-style: none;
-   padding: 0;
-   margin: 0;
-   height: 100%;
-   display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    height: inherit;
 }
 
-nav #menu ol li {
+nav #menu > ol > li {
+    height: inherit;
     position: relative;
-    height: 100%;
-    line-height: 80px;
-    text-align: center;
 }
 
-nav #menu ol li a {
+nav #menu a {
+    display: block;
     text-decoration: none;
     color: #FFFFFF;
-    height: 100%;
-    width: 100px;
-    display: block;
+}
+
+nav #menu > ol > li > a {
+    height: inherit;
+    padding: 0 20px 0 20px;
+    text-align: center;
+    line-height: 80px;
 }
 
 nav #menu ol ol {
-    left: 0;
-    top: 100%;
-    flex-direction: column;
-    background-color: #7f8c8d;
-    height: auto;   
     position: absolute;
-}
-
-nav #menu ol ol li {
-    line-height: 1; 
-    text-align: left;
+    flex-direction: column;
     height: auto;
-    display: none;
-    /* Vertical Center Text in Li */
-}
-
-nav #menu ol ol li a {
-    display: block;
-    padding: 20px;
-    width: auto;
-}
-
-nav #menu ol li:hover {
+    display: none;    
     background-color: #7f8c8d;
 }
 
-nav #menu ol li:hover ol li {
+nav #menu ol ol a {
+    padding: 10px 10px 10px 20px;
+}
+
+nav #menu > ol li:hover {
+    background-color: #BBBEBE;
+}
+
+nav #menu ol li:hover ol{
     display: block;
 }
 
@@ -111,7 +134,28 @@ header {
 #contact {
     height: 50px;
     background-color: #95a5a6;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
 }
+
+#contact a {
+    color: #fff;
+}
+
+#contact a:first-child {
+    margin-right: 30px;
+}
+
+#contact a:last-child {
+    margin-left: 30px;
+}
+
+#contact i {
+    margin-right: 10px;
+}
+
 
 #over-ons .card {
     height: 300px;
@@ -122,16 +166,11 @@ header {
     background-color: #95a5a6;
 }
 
-#soorten-fietsen #container {
-    display: flex;
-    flex-flow: row wrap; 
-    justify-content: flex-start;
+#soorten-fietsen .card {
+    min-height: 300px;
+    width: 100%;
 }
 
-#soorten-fietsen #container .card {
-    width: 340px;
-    height: 340px;
-}
 
 footer {
     background-color: #bdc3c7;
