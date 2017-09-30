@@ -62,7 +62,7 @@ p + p {
     margin-bottom: 10px;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -160,6 +160,19 @@ nav #menu ol li:hover ol {
     background-color: rgb(45, 46, 50);
 }
 
+#topfooter h2 {
+    font-size: 30px;
+    color: white;
+}
+
+#topfooter a {
+    color: white;
+}
+
+#topfooter a:hover {
+    color: rgb(79, 89, 166);
+}
+
 #topfooter .wrapper {
     display: flex;
     flex-direction: row;
@@ -184,6 +197,11 @@ nav #menu ol li:hover ol {
     text-align: center;
     line-height: 50px;
     font-style: italic;
+}
+
+#bottomfooter p span {
+    color: rgb(79, 89, 166);
+    font-style: normal;
 }
 
 ul li {

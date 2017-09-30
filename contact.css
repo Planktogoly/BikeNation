@@ -3,27 +3,8 @@
     background-color: hotpink;
 }
 
-.blue-color {
-    color: rgb(79, 89, 166);
-    font-style: normal;
-}
-
 h1 {
     text-align: center;
-}
-
-h2 {
-    font-size: 30px;
-    color: white;
-}
-
-a {
-    color: white;
-    text-decoration: none;
-}
-
-a:hover {
-    color: rgb(79, 89, 166);
 }
 
 .page-content .wrapper {
