@@ -8,10 +8,10 @@ body>*:not(header):not(footer):not(nav) {
 
 .wrapper {
     width: 95%;
-    height: 100%;
-    max-width: 1400px;
-    margin-left: 50%;
-    transform: translateX(-50%);
+    max-width: 1200px;
+    height: inherit;
+    margin: 0 auto;
+    position: relative;
 }
 
 .row {
@@ -25,8 +25,12 @@ body>*:not(header):not(footer):not(nav) {
     box-sizing: border-box; 
 }
 
-.row-4 > div{
+.row-4 > *{
     width: 25%;
+}
+
+.row-3 > *{
+    width: 33.333%;
 }
 
 h* {
@@ -69,12 +73,12 @@ nav #menu {
     height: inherit;
 }
 
-nav img {
-    position: relative;
-    width: auto;
-    height: 30%;
+nav #logo i{
+    position: relative;      
     top: 50%;
     transform: translateY(-50%);
+    color: white;
+    font-size: 30px;
 }
 
 nav #menu ol {
@@ -126,34 +130,36 @@ nav #menu ol li:hover ol{
 header {
     position: relative;
     top: 0;
-    height: 600px;
-    background-color: #bdc3c7;
+    height: 100vh;
+    background: url(https://www.hdwallpapers.in/walls/bicycle-wide.jpg);
+    background-attachment: fixed;
+    background-size: cover;
     width: 100%;
 }
 
 #contact {
+    position: absolute;
     height: 50px;
-    background-color: #95a5a6;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     color: #fff;
+    bottom: 150px;
+    margin-left: 50%;
+    transform: translateX(-50%);  
+    width: 600px;
+}
+
+#contact div {
+    display: flex;
     text-align: center;
-    line-height: 50px;
-}
-
-#contact a {
-    color: #fff;
-}
-
-#contact a:first-child {
-    margin-right: 30px;
-}
-
-#contact a:last-child {
-    margin-left: 30px;
+    flex-direction: column;
 }
 
 #contact i {
-    margin-right: 10px;
+    font-size: 25px;
+    padding: 20px;
+}
+
+#contact span {
+    font-size: 15px;
 }
 
 
@@ -161,7 +167,7 @@ header {
     height: 300px;
 }
 
-#slider {
+.parallax {
     height: 500px;
     background-color: #95a5a6;
 }
