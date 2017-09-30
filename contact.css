@@ -1,14 +1,17 @@
+
 .page-title {
-    height: 200px;
-    background-color: hotpink;
+    background-color: rgb(79, 89, 166);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
-h1 {
+.page-title h1 {
+    padding: 20px;
+    color: white;
     text-align: center;
 }
 
 .page-content .wrapper {
-    background-color: white;
+    background-color: rgb(252, 253, 253);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -17,7 +20,7 @@ h1 {
 
 form {
     margin-top: 25px;
-    width: 500px;
+    width: 700px;
     height: 400px;
     background-color: orangered;
 }
@@ -26,15 +29,42 @@ aside {
     display: flex;
     flex-direction: column;
     width: 400px;
-    margin: 25px 0 25px 10%;
+    margin: 25px 0 25px 5%;
 }
 
 .contact-card:nth-child(1) {
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 .contact-card {
+    position: relative;
     width: 100%;
     height: 200px;
-    background-color: blueviolet;
+    background-color: rgb(252, 253, 253);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.contact-card .card-title {
+    text-align: center;
+    padding-top: 85px;
+    padding-bottom: 3px;
+    background-color: #E0E0E0;
+}
+
+.contact-card .content {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.contact-card .circle-big {
+    background-color: rgb(79, 89, 166);
+    position: absolute;
+    margin: 0 auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: -40px;
+}
+
+.contact-card .circle-big i {
+    color: white;
 }

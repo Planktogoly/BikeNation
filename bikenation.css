@@ -156,7 +156,6 @@ nav #menu ol li:hover ol {
 }
 
 #topfooter {
-    height: 250px;
     background-color: rgb(45, 46, 50);
 }
 
@@ -185,6 +184,7 @@ nav #menu ol li:hover ol {
 
 .column {
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 #bottomfooter {
@@ -227,6 +227,32 @@ ul li {
     position: absolute;
     left: 0;
     top: 70%;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    margin-top: -22px;
+    overflow: hidden;
+    color: rgb(79, 89, 166);
+}
+
+.circle-big {
+    background-color: white;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    line-height: 1;
+    font-size: 40px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.circle-big i {
+    position: absolute;
+    left: 0;
+    top: 50%;
     height: 100%;
     width: 100%;
     text-align: center;
