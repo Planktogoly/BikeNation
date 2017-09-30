@@ -1,0 +1,30 @@
+.grid {
+    margin-top: -80px;
+}
+
+.grid > .wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+}
+
+.grid .box {
+    flex: 33.333% 0;
+    height: 0;
+    padding: 5px;
+    padding-bottom: 30%;
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.grid .box img {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.grid .wide {
+    flex: 66.666% 0;
+}
