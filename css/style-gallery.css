@@ -5,26 +5,56 @@
 .grid > .wrapper {
     display: flex;
     flex-flow: row wrap;
-    align-items: flex-start;
 }
 
-.grid .box {
-    flex: 33.333% 0;
-    height: 0;
-    padding: 5px;
-    padding-bottom: 30%;
-    box-sizing: border-box;
-    display: flex;
+.box {
+    width: 100%;
+    height: auto;
     position: relative;
     overflow: hidden;
+    padding: 5px;
 }
 
-.grid .box img {
-    position: absolute;
-    min-width: 100%;
-    min-height: 100%;
+.box img {
+    width: 100%;
+    height: auto;
 }
 
-.grid .wide {
-    flex: 66.666% 0;
+.box, .col {
+    box-sizing: border-box;
+}
+
+
+@media screen and (min-width: 480px) {
+    .box {
+        width: 50%;
+    }
+
+    .wide {
+        width: 100%;
+    }
+
+    .col {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .box, .col {
+        width: 33.333%;
+    }
+
+    .col {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .col .box {
+        width: 100%;
+        padding: 0;
+    }
+
+    .wide {
+        width: 66.666%;
+    }
 }
