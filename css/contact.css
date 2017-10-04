@@ -1,0 +1,156 @@
+.page-title {
+    background-color: rgb(79, 89, 166);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.page-title h1 {
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.page-content .wrapper {
+    background-color: rgb(252, 253, 253);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+form {
+    position: relative;
+    margin-top: 25px;
+    width: 700px;
+    background-color: #E0E0E0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+form .circle-big {
+    background-color: rgb(79, 89, 166);
+    position: absolute;
+    margin: 0 auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: -40px;
+}
+
+form .circle-big i {
+    color: white;
+}
+
+#form li {
+    padding: 0;
+    display: block;
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+
+#form li div {
+    display: inline-block;
+}
+
+#form input[type=text], 
+#form input[type=email],
+textarea {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border:1px solid #BEBEBE;
+    padding: 7px;
+    margin:0px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;  
+}
+
+#form input[type=text]:focus, 
+#form input[type=email]:focus,
+textarea:focus {
+    -moz-box-shadow: 0 0 8px rgb(79, 89, 166);
+    -webkit-box-shadow: 0 0 8px rgb(79, 89, 166);
+    box-shadow: 0 0 8px rgb(79, 89, 166);
+    border: 1px solid rgb(79, 89, 166);
+}
+
+#form #bericht {
+    width: 100%;
+    height: 100px;
+}
+
+#form label{
+    margin:0 0 3px 0;
+    padding:0px;
+    display:block;
+    font-weight: bold;
+}
+
+#form {
+    margin:10px auto;
+    max-width: 600px;
+    padding: 20px 12px 10px 20px;
+    font: 13px 'Raleway', sans-serif;
+}
+
+#form input[type=submit], .form-style-1 input[type=button]{
+    background: rgb(79, 89, 166);
+    padding: 8px 15px 8px 15px;
+    border: none;
+    color: #fff;
+}
+
+#form input[type=submit]:hover, .form-style-1 input[type=button]:hover{
+    background: rgb(70, 78, 136);
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
+
+label span {
+    color: red;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 25px 0 25px 5%;
+}
+
+.contact-card:nth-child(1) {
+    margin-bottom: 60px;
+}
+
+.contact-card {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: rgb(252, 253, 253);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.contact-card .card-title {
+    text-align: center;
+    padding-top: 85px;
+    padding-bottom: 3px;
+    background-color: #E0E0E0;
+}
+
+.contact-card .content {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.contact-card .circle-big {
+    background-color: rgb(79, 89, 166);
+    position: absolute;
+    margin: 0 auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: -40px;
+}
+
+.contact-card .circle-big i {
+    color: white;
+}
