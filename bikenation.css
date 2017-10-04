@@ -7,7 +7,6 @@ body>*:not(footer):not(nav) {
     max-width: 1200px;
     height: inherit;
     margin: 0 auto;
-    position: relative;
 }
 
 .row {
@@ -29,12 +28,6 @@ body>*:not(footer):not(nav) {
     width: 33.333%;
 }
 
-ul, ol {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
 h1 {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
@@ -50,7 +43,7 @@ h1, h2 {
     margin-bottom: 20px;
 }
 
-span, li, a, p {
+span, li, a, p, label {
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
     font-size: 15px;
@@ -78,10 +71,9 @@ a {
 
 nav {
     position: fixed;
-    width: 100%;
-    font-family: "Roboto", sans-serif;
-    z-index: 1000;
+    z-index: 10;
     height: 80px;
+    width: 100%;
     background-color: #FCFDFD;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
@@ -91,36 +83,54 @@ nav .wrapper {
     justify-content: space-between;
 }
 
-nav #menu {
-    height: inherit;
-}
-
 nav #logo i {
-    position: relative;
     top: 50%;
     transform: translateY(-50%);
     color: #2D2E32;
     font-size: 30px;
+    position: absolute;
 }
 
-nav #menu ol {
+nav #menu input {
+   display: none;
+}
+
+nav #menu input:checked ~ ol {
+    display: flex;
+}
+
+nav #menu label {
+    line-height: 80px;
+    cursor: pointer;    
+}
+
+nav ol {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
+}
+
+nav #menu ol {
+    display: none;
+    flex-direction: column;
     height: inherit;
+    background-color: #FCFDFD;
+    position: absolute;
+    width: 100%;
+    top: 80px;  
+    left: 0;    
 }
 
 nav #menu>ol>li {
     height: inherit;
     position: relative;
-    box-sizing: border-box;
 }
 
 nav #menu a {
     display: block;
     text-decoration: none;
     color: #2D2E32;
+    box-sizing: border-box;
 }
 
 nav #menu>ol>li>a {
@@ -131,20 +141,23 @@ nav #menu>ol>li>a {
 }
 
 nav #menu ol ol {
-    position: absolute;
     flex-direction: column;
+    position: relative;
     height: auto;
     display: none;
-    background-color: #FCFDFD;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    top: 0;
+    background-color: #F7F7F7;
 }
 
 nav #menu ol ol a {
-    padding: 10px 20px;
+    padding: 15px 0px;
+    text-align: center;
 }
 
-nav #menu>ol>li:hover {
-    border-bottom: 2px solid #4F59A6;
+nav #menu>ol>li:hover>a{
+    background-color: #F7F7F7;
+    text-decoration: underline;
+    color: #4F59A6;
 }
 
 nav #menu ol ol li:hover a {
@@ -153,6 +166,35 @@ nav #menu ol ol li:hover a {
 
 nav #menu ol li:hover ol {
     display: block;
+}
+
+@media screen and (min-width: 480px) {
+
+}
+
+@media screen and (min-width: 1024px) {
+    nav input + label {
+        display: none;
+    }
+
+    nav #menu>ol {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        top: 0px;
+    }
+
+    nav #menu ol ol {
+        position: absolute;
+        top: 80px;
+        width: auto;
+    }
+
+    nav #menu ol ol a{
+        text-align: left;
+        padding: 20px 30px;
+    }
 }
 
 header {
