@@ -68,7 +68,7 @@ header {
 }
 
 .box:hover img {
-    transform: scale(1.2);
+    transform: scale(1.2) rotate(2deg);
 }
 
 .box:hover .overlay span {
