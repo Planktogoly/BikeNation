@@ -5,24 +5,30 @@ html {
 
 header {
     position: relative;
-    top: 0;
     height: 100vh;
     background: url(https://www.hdwallpapers.in/walls/bicycle-wide.jpg);
     background-attachment: fixed;
     background-size: cover;
 }
 
+/* Why strange acting */
+
+header .wrapper {
+    position: relative;
+}
+
 #contact {
     position: absolute;
-    height: 50px;
-    color: #fff;
     bottom: 80px;
+    color: #fff;
     margin-left: 50%;
     transform: translateX(-50%);
-    width: 600px;
-    border: 1px solid #fff;
-    border-radius: 2px;
-    height: auto;
+    width: 90%;
+    max-width: 600px;
+    /* border: 1px solid #fff;
+    border-radius: 2px; */
+    display: flex;
+    flex-direction: column;
 }
 
 #contact div {
@@ -30,14 +36,20 @@ header {
     text-align: center;
     flex-direction: column;
     padding: 10px;
+    width: 100%;
+}
+
+#contact div:not(:last-child) {
+    margin-bottom: 10px;
 }
 
 #contact i {
-    font-size: 25px;
-    padding-bottom: 20px;
+    font-size: 20px;
+    padding-bottom: 10px;
 }
 
 #contact span {
+    font-weight: 400;
     font-size: 15px;
 }
 
@@ -61,9 +73,23 @@ footer {
 }
 
 @media screen and (min-width: 480px) {
+    #contact {
+        flex-direction: row;
+    }
 
+    #contact div {
+        width: 33.333%;
+        margin: 0;
+    }
 }
 
 @media screen and (min-width: 1024px) {
+    #contact i {
+        font-size: 25px;
+        padding-bottom: 20px;
+    }
     
+    #contact span {
+        font-size: 17px;
+    }
 }

@@ -18,6 +18,7 @@ body>*:not(footer):not(nav) {
 .row > div {
     padding: 4px;
     box-sizing: border-box; 
+    word-wrap: break-word;
 }
 
 .row-4 > *{
@@ -198,14 +199,24 @@ nav #menu ol li:hover ol {
 }
 
 header {
-    top: 0;
     position: relative;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+header .text {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
 }
 
 .small-header {
     height: 500px;
-    background-color: #D9D6D6;
     margin-bottom: 0;
+    background-color: red;
 }
 
 footer ul {
