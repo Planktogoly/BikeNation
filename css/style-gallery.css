@@ -1,3 +1,7 @@
+header {
+    background-image: url(https://www.hdwallpapers.in/walls/bicycle-wide.jpg);
+}
+
 .grid {
     margin-top: -80px;
 }
@@ -13,19 +17,67 @@
     width: 100%;
     height: auto;
     position: relative;
-    overflow: hidden;
     padding: 5px;
+}
+
+.box .overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top:0; 
+    left:0;
+}
+
+.box .overlay span {
+    background-color: #D9D6D6 ;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+}
+
+.box a {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.box h2 {
+    margin: 0;
 }
 
 .box img {
     width: 100%;
-    height: auto;
+    height: 100%;
     box-sizing: border-box;
+    display: block;
+}
+
+.box h2 {
+    position: absolute;
+    transform: translateY(-10px);
+    opacity: 0;
+}
+
+.box img, .box span, .box h2 {
     transition: all 0.5s ease-in-out;
 }
 
-.box img:hover {
+.box:hover img {
     transform: scale(1.2);
+}
+
+.box:hover .overlay span {
+    opacity: 0.8;
+}
+
+.box:hover h2 {
+    transform: translateY(0px);
+    opacity: 1;
 }
 
 .box, .col {
@@ -53,12 +105,11 @@
 
     .col {
         flex-direction: column;
-        padding: 5px;
     }
 
     .col .box {
         width: 100%;
-        padding: 0;
+        padding: 5px;
     }
 
     .wide {
