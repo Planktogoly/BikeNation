@@ -7,6 +7,8 @@
     flex-flow: row wrap;
 }
 
+/* Why scaling to padding */
+
 .box {
     width: 100%;
     height: auto;
@@ -18,12 +20,17 @@
 .box img {
     width: 100%;
     height: auto;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+}
+
+.box img:hover {
+    transform: scale(1.2);
 }
 
 .box, .col {
     box-sizing: border-box;
 }
-
 
 @media screen and (min-width: 480px) {
     .box {

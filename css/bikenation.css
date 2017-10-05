@@ -18,6 +18,7 @@ body>*:not(footer):not(nav) {
 .row > div {
     padding: 4px;
     box-sizing: border-box; 
+    word-wrap: break-word;
 }
 
 .row-4 > *{
