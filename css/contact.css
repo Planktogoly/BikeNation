@@ -1,3 +1,7 @@
+body {
+    background-color: #E0E0E0;
+}
+
 .page-title {
     background-color: rgb(79, 89, 166);
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -10,32 +14,23 @@
 }
 
 .page-content .wrapper {
-    background-color: rgb(252, 253, 253);
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: center;
+    flex-flow: wrap;
+}
+
+.form {
+    position: relative;
+    width: 60%;  
+    padding: 25px;
+    box-sizing: border-box;
 }
 
 form {
-    position: relative;
-    margin-top: 25px;
-    width: 700px;
-    background-color: #E0E0E0;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-
-form .circle-big {
-    background-color: rgb(79, 89, 166);
-    position: absolute;
-    margin: 0 auto;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    margin-top: -40px;
-}
-
-form .circle-big i {
-    color: white;
+    padding: 25px;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 #form li {
@@ -63,6 +58,7 @@ textarea {
     -ms-transition: all 0.30s ease-in-out;
     -o-transition: all 0.30s ease-in-out;
     outline: none;  
+    resize: none;
 }
 
 #form input[type=text]:focus, 
@@ -87,9 +83,9 @@ textarea:focus {
 }
 
 #form {
-    margin:10px auto;
+    margin: 0 auto;
+    padding: 0;
     max-width: 600px;
-    padding: 20px 12px 10px 20px;
     font: 13px 'Raleway', sans-serif;
 }
 
@@ -114,8 +110,8 @@ label span {
 aside {
     display: flex;
     flex-direction: column;
-    width: 400px;
-    margin: 25px 0 25px 5%;
+    width: 30%;
+    padding:25px;
 }
 
 .contact-card:nth-child(1) {
@@ -127,22 +123,20 @@ aside {
     width: 100%;
     height: 200px;
     background-color: rgb(252, 253, 253);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .contact-card .card-title {
     text-align: center;
-    padding-top: 85px;
-    padding-bottom: 3px;
-    background-color: #E0E0E0;
+    padding-top: 50px;
 }
 
 .contact-card .content {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
-.contact-card .circle-big {
+.circle-big {
     background-color: rgb(79, 89, 166);
     position: absolute;
     margin: 0 auto;
@@ -151,6 +145,20 @@ aside {
     margin-top: -40px;
 }
 
-.contact-card .circle-big i {
+.circle-big i {
     color: white;
+}
+
+@media screen and (max-width: 1024px) {
+    aside, .form {
+        width: 100%;
+    }
+
+    aside {
+        flex-direction: row;
+    }
+
+    .contact-card:first-child {
+        margin-right: 20px;
+    }
 }
