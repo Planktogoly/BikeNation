@@ -2,6 +2,16 @@ body>*:not(footer):not(nav) {
     margin-bottom: 60px;
 }
 
+body > section {
+    margin-top: -80px;
+    z-index: 5;
+    position: relative;
+}
+
+body, html {
+    background-color: #eee;
+}
+
 .wrapper {
     width: 95%;
     max-width: 1200px;
@@ -44,16 +54,19 @@ h1, h2 {
     margin-bottom: 20px;
 }
 
-span, li, a, p, label {
+span, li, a, p, label, td, .button {
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
     font-size: 15px;
-    margin: 0;
+    margin: 0px;
+}
+
+p + h2 {
+    margin-top: 20px;
 }
 
 p + p {
-    margin: 0;
-    margin-bottom: 10px;
+    margin: 10px 0 0 0;
 }
 
 a {
@@ -64,6 +77,11 @@ a {
     background: #fff;
     border-radius: 2px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    padding: 20px;
+}
+
+.card + .card {
+    margin-top: 10px;
 }
 
 .nav-filler {
@@ -201,8 +219,9 @@ nav #menu ol li:hover ol {
 header {
     position: relative;
     background-attachment: fixed;
-    background-position: center center;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 header .text {
@@ -211,6 +230,8 @@ header .text {
     top: 50%;
     transform: translateY(-50%);
     color: white;
+    font-weight: 700;
+    font-size: 25px;
 }
 
 .small-header {
@@ -251,7 +272,7 @@ footer ul {
     text-align: center;
 }
 
-.column {
+footer .column {
     margin-top: 50px;
     margin-bottom: 50px;
 }
@@ -309,7 +330,6 @@ ul li {
     border-radius: 100%;
     width: 80px;
     height: 80px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     line-height: 1;
     font-size: 35px;
     position: relative;
