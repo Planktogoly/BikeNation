@@ -84,8 +84,25 @@ a {
     margin-top: 10px;
 }
 
-.nav-filler {
-    height: 80px;
+.button {
+    display: flex;
+    justify-content: center;
+    border-radius: 2px;
+    padding: 15px 0;
+    color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+    font-weight: normal;
+}
+
+.button.purple {
+    background-color: rgb(79, 89, 166);
+}
+
+.button:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transform: scale(1.01);
 }
 
 nav {
@@ -94,7 +111,7 @@ nav {
     height: 80px;
     width: 100%;
     background-color: #FCFDFD;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 nav .wrapper {
@@ -166,6 +183,7 @@ nav #menu ol ol {
     display: none;
     top: 0;
     background-color: #F7F7F7;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 nav #menu ol ol a {
