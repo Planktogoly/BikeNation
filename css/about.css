@@ -1,0 +1,33 @@
+.about {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    position: relative;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 35px;
+}
+
+.person {
+    width: 45%;
+    margin: 0;
+    padding: 0;
+}
+
+.circle-big {
+    background-color: rgb(79, 89, 166);
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    margin-top: -40px;
+}
+
+.circle-big i {
+    color: white;
+}
