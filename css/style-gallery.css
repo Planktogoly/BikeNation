@@ -2,10 +2,6 @@ header {
     background-image: url(https://www.hdwallpapers.in/walls/bicycle-wide.jpg);
 }
 
-.grid {
-    margin-top: -80px;
-}
-
 .grid > .wrapper {
     display: flex;
     flex-flow: row wrap;
