@@ -1,0 +1,61 @@
+header {
+    background-image: url(https://www.gezinopreis.nl/wp-content/uploads/2014/07/fietsen_header.jpg);
+}
+
+.page-content .wrapper {
+    display: flex;
+    flex: column;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.bike {
+    height: 300px;
+    width: 100%;
+    margin-bottom: 50px;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    text-align: center;
+    background-size: cover;
+}
+
+.bike:nth-child(1) {
+    background-image: url(/Omafiets.jpg);    
+}
+
+.bike:nth-child(2) {
+    background-image: url(/Elektrischefiets.jpg);
+}
+
+.bike:nth-child(3) {
+    background-image: url(/Bakfiets.jpg);    
+}
+
+.bike:nth-child(4) {
+    background-image: url(/MountainBike.jpg);  
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content h1 {
+    margin: auto auto;
+    color: white;
+    font-size: 50px;
+}
+
+.content:hover {
+    background: rgba(79, 89, 166, 0.6);
+}
+
+@media screen and (min-width: 1024px) {
+    .bike {
+        width: 45%;
+    }
+}

@@ -67,11 +67,6 @@ header .wrapper {
     width: 100%;
 }
 
-footer {
-    background-color: #bdc3c7;
-    height: 300px;
-}
-
 @media screen and (min-width: 480px) {
     #contact {
         flex-direction: row;
