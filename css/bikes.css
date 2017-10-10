@@ -20,19 +20,19 @@ header {
 }
 
 .bike:nth-child(1) {
-    background-image: url(/Omafiets.jpg);    
+    background-image: url("../images/Omafiets.jpg");    
 }
 
 .bike:nth-child(2) {
-    background-image: url(/Elektrischefiets.jpg);
+    background-image: url("../images/Elektrischefiets.jpg");
 }
 
 .bike:nth-child(3) {
-    background-image: url(/Bakfiets.jpg);    
+    background-image: url("../images//Bakfiets.jpg");    
 }
 
 .bike:nth-child(4) {
-    background-image: url(/MountainBike.jpg);  
+    background-image: url("../images/MountainBike.jpg");  
 }
 
 .content {
