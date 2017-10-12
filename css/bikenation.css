@@ -95,6 +95,7 @@ a {
     cursor: pointer;
     transition: all 0.5s cubic-bezier(.25,.8,.25,1);
     font-weight: normal;
+    margin-top: 20px;
 }
 
 .button.purple {
@@ -159,8 +160,9 @@ nav #menu ol {
 }
 
 nav #menu>ol>li {
-    height: inherit;
+    min-height: 50px;
     position: relative;
+    line-height: 50px;
 }
 
 nav #menu a {
@@ -174,7 +176,6 @@ nav #menu>ol>li>a {
     height: inherit;
     padding: 0 20px 0 20px;
     text-align: center;
-    line-height: 80px;
 }
 
 nav #menu ol ol {
@@ -184,11 +185,9 @@ nav #menu ol ol {
     display: none;
     top: 0;
     background-color: #F7F7F7;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 nav #menu ol ol a {
-    padding: 15px 0px;
     text-align: center;
 }
 
@@ -219,14 +218,22 @@ nav #menu ol li:hover ol {
         background-color: transparent;
         top: 0px;
     }
+    nav #menu>ol>li {
+        min-height: inherit;
+        line-height: 80px;
+        position: relative;
+    }
     nav #menu ol ol {
         position: absolute;
         top: 80px;
         width: auto;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     }
+    
     nav #menu ol ol a {
         text-align: left;
-        padding: 20px 30px;
+        line-height: 40px;
+        padding: 0 15px;
     }
 }
 
