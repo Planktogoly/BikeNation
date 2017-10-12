@@ -6,21 +6,40 @@ html {
 header {
     position: relative;
     height: 100vh;
-    background: url(https://www.hdwallpapers.in/walls/bicycle-wide.jpg);
+    background: url("https://source.unsplash.com/5UQoVk8_d-4");
     background-attachment: fixed;
     background-size: cover;
 }
 
 /* Why strange acting */
-
+header{
+    color: white;
+}
 header .wrapper {
     position: relative;
+}
+
+header #header-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header #header-content h1:after{
+    content: "";
+    display: block;
+    margin-top: 5px;
+    width: 50px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: rgb(79, 89, 166);
 }
 
 #contact {
     position: absolute;
     bottom: 80px;
-    color: #fff;
     margin-left: 50%;
     transform: translateX(-50%);
     width: 90%;
@@ -57,9 +76,96 @@ header .wrapper {
     height: 300px;
 }
 
-.parallax {
-    height: 500px;
-    background-color: #95a5a6;
+#slider{
+    height: 600px;
+}
+
+#slider .slider-inner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+#slider .slider-inner article{
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slider 20s infinite;
+}
+
+#slider article h1{
+    margin-bottom: 0;
+}
+
+#slider article div{
+    width: 95%;
+    box-sizing: border-box;
+}
+
+#slider .slider-inner article:first-child{
+    background-image: url("https://source.unsplash.com/hI1DsDRJWvY");
+}
+
+#slider .slider-inner article:nth-child(2){
+    background-image: url("https://source.unsplash.com/o2FCfhNSjPo");
+}
+
+#slider .slider-inner article:last-child{
+    background-image: url("https://source.unsplash.com/Jj9dycup6HM");
+}
+
+#slider .slider-inner div{
+    background-color: black;
+    padding: 10px;
+    border-radius: 2px;
+    position: absolute;
+}
+
+@keyframes slider{
+    0% {
+        left: 0px;
+    }
+
+    12.5%{
+        left: 0px;
+    }
+
+    25%{
+        left: -100%;
+    }
+
+    37.5%{
+        left: -100%;
+    }
+
+    50%{
+        left: -200%;
+    }
+
+    62.5%{
+        left: -200%;
+    }
+
+    75.0%{
+        left: -100%;
+    }
+
+    87.5%{
+        left: -100%
+    }
+
+    100%{
+        left: 0;
+    }
+
 }
 
 #soorten-fietsen .card {
@@ -86,5 +192,31 @@ header .wrapper {
     
     #contact span {
         font-size: 17px;
+    }
+
+    #slider .slider-inner article{
+        display: inline-block;
+        left: -200%;
+    }
+
+    #slider .slider-inner article div{
+        width: 400px;
+    }
+
+    #slider .slider-inner article:first-child div{
+        left: 300px;
+        top: 100px;   
+    }
+
+    #slider .slider-inner article:nth-child(2) div{
+        right: 150px;
+        top: 150px;
+        text-align: right;
+    }
+
+    #slider .slider-inner article:last-child div{
+        left: 50px;
+        top: 200px;
+
     }
 }
