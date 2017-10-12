@@ -17,14 +17,14 @@ header{
 }
 header .wrapper {
     position: relative;
-}
-
-header #header-content{
-    width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+header #header-content{
+    position: relative;
+    top: -50px;
 }
 
 header #header-content h1:after{
@@ -39,9 +39,7 @@ header #header-content h1:after{
 
 #contact {
     position: absolute;
-    bottom: 80px;
-    margin-left: 50%;
-    transform: translateX(-50%);
+    bottom: 40px;
     width: 90%;
     max-width: 600px;
     /* border: 1px solid #fff;
@@ -63,18 +61,54 @@ header #header-content h1:after{
 }
 
 #contact i {
-    font-size: 20px;
+    font-size: 18px;
     padding-bottom: 10px;
 }
 
 #contact span {
     font-weight: 400;
-    font-size: 15px;
+    font-size: 13px;
 }
 
-#over-ons .card {
-    height: 300px;
+#about .wrapper{
+    display: flex;
+    flex-direction: column;
 }
+
+#about img{
+    width: 100%;
+    height: auto;
+}
+
+#about article{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+#about article ol{
+    margin-bottom: 30px;
+    list-style: none;
+    padding: 0;
+}
+
+#about article li{
+    padding: 5px 0;
+}
+
+#about article li:first-child{
+    padding-top: 0;
+}
+
+#about article li:last-child{
+    padding-bottom: 0;
+}
+
+#about article i{
+    color: green;
+    margin-right: 10px;
+}
+
 
 #slider{
     height: 600px;
@@ -180,7 +214,14 @@ header #header-content h1:after{
 
     #contact div {
         width: 33.333%;
-        margin: 0;
+    }
+
+    #contact div:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    header #header-content{
+        top: 0;
     }
 }
 
@@ -192,6 +233,19 @@ header #header-content h1:after{
     
     #contact span {
         font-size: 17px;
+    }
+
+    #about .wrapper{
+        flex-direction: row;
+    }
+
+    #about .wrapper div, #about .wrapper article{
+        width: 50%;
+    }
+
+    #about article{
+        padding-left: 20px;
+        margin-top: 0;
     }
 
     #slider .slider-inner article{
