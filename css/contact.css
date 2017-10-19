@@ -3,23 +3,29 @@ header {
 }
 
 .page-content .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-flow: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
 }
 
 .form {
     position: relative;
     width: 100%;
-    padding: 25px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 form {
     padding: 35px;
-    background-color: white;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 ul li {
@@ -33,7 +39,7 @@ form ul li div {
     display: inline-block;
 }
 
-form ul input[type=text], 
+form ul input[type=text],
 form ul input[type=email],
 textarea {
     box-sizing: border-box;
@@ -46,14 +52,13 @@ textarea {
     -moz-transition: all 0.30s ease-in-out;
     -ms-transition: all 0.30s ease-in-out;
     -o-transition: all 0.30s ease-in-out;
-    outline: none;  
+    outline: none;
     resize: none;
 }
 
-form ul input[type=text]:focus, 
+form ul input[type=text]:focus,
 form ul input[type=email]:focus,
 textarea:focus {
-    -moz-box-shadow: 0 0 8px rgb(79, 89, 166);
     -webkit-box-shadow: 0 0 8px rgb(79, 89, 166);
     box-shadow: 0 0 8px rgb(79, 89, 166);
     border: 1px solid rgb(79, 89, 166);
@@ -97,11 +102,15 @@ label span {
 }
 
 aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
-    padding: 25px;
-    margin-top: 30px;
+    margin-top: 80px;
 }
 
 .contact-card:nth-child(1) {
@@ -110,37 +119,26 @@ aside {
 
 .contact-card {
     position: relative;
-    width: 100%;
-    height: 200px;
+    height: auto;
     background-color: rgb(252, 253, 253);
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .contact-card .content {
     text-align: center;
-    margin-top: 50px;
-}
-
-.circle-big {
-    background-color: rgb(79, 89, 166);
-    position: absolute;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    margin-top: -40px;
-}
-
-.circle-big i {
-    color: white;
 }
 
 @media screen and (min-width: 1024px) {
+    .form, aside{
+        padding: 5px;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+    }
     aside {
         width: 30%;
         margin: 0;
     }
 
     .form {
-        width: 60%;
+        width: 70%;
     }
 }

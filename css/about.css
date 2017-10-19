@@ -3,19 +3,14 @@ header {
     background-position: center center;
 }
 
-.about {
-    width: 100%;
-    background-color: white;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    position: relative;
-}
-
 .content {
-    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    flex-flow: column;
-    padding: 15px 35px 35px 35px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
 }
 
 .content h1 {
@@ -26,11 +21,11 @@ header {
 
 .content h1:after {
     content: "";
+    background-color: rgb(79, 89, 166);
     display: block;
     width: 50px;
     height: 3px;
     margin-top: 5px;
-    background-color: black;
     border-radius: 3px;
 }
 
@@ -40,8 +35,20 @@ header {
     padding: 0;
     padding-top: 30px;
     text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+}
+
+.group .person:first-child{
+    padding-top: 0px
 }
 
 .person div {
@@ -49,18 +56,28 @@ header {
 }
 
 .person img {
-    width: 200px;
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
 }
 
 @media screen and (min-width: 480px) {
     .content {
-        flex-flow: column wrap;
-        justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column wrap;
+                flex-flow: column wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
 
     .person {
         width: 100%;
-        flex-flow: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row;
+                flex-flow: row;
     }
 
     .person h2,p {
@@ -70,34 +87,37 @@ header {
     .person div {
         margin: 0;
     }
+
+    .person img{
+        width: 40%
+    }
 }
 
 @media screen and (min-width: 1024px) {
     .content {
-        flex-flow: row wrap;
-        justify-content: space-between;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
 
     .group {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
 
     .person {
-        width: 45%;
+        width: 48%;
     }
-}
-
-.circle-big {
-    background-color: rgb(79, 89, 166);
-    position: absolute;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    margin-top: -40px;
-}
-
-.circle-big i {
-    color: white;
 }

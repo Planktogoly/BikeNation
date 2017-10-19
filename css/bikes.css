@@ -3,10 +3,16 @@ header {
 }
 
 .page-content .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex: column;
-    justify-content: space-around;
-    flex-flow: wrap;
+    -webkit-box-flex: column;
+        -ms-flex: column;
+            flex: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
 }
 
 .bike {
@@ -14,13 +20,16 @@ header {
     width: 100%;
     margin-bottom: 50px;
     background-color: white;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     text-align: center;
     background-size: cover;
+    border-radius: 2px;
+    overflow: hidden;
 }
 
 .bike:nth-child(1) {
-    background-image: url("../images/Omafiets.jpg");    
+    background-image: url("../images/Omafiets.jpg");
 }
 
 .bike:nth-child(2) {
@@ -28,26 +37,40 @@ header {
 }
 
 .bike:nth-child(3) {
-    background-image: url("../images//Bakfiets.jpg");    
+    background-image: url("../images//Bakfiets.jpg");
 }
 
 .bike:nth-child(4) {
-    background-image: url("../images/MountainBike.jpg");  
+    background-image: url("../images/MountainBike.jpg");
 }
 
 .content {
     width: 100%;
     height: 100%;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+    -webkit-transition: all 300ms;
+
+    transition: all 300ms;
 }
 
 .content h1 {
     margin: auto auto;
     color: white;
     font-size: 50px;
+    word-wrap: break-word;
+    font-size: 35px;
 }
 
 .content:hover {

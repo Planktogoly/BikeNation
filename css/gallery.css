@@ -1,0 +1,138 @@
+header {
+    background-image: url("https://cdn.lifehacker.ru/wp-content/uploads/2016/08/road_line_marking_72284_1920x1080_1470552194.jpg");
+}
+
+.grid > .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+}
+
+.box {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 5px;
+}
+
+.box .overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    top:0;
+    left:0;
+}
+
+.box .overlay span {
+    background-color: #D9D6D6 ;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+}
+
+.box a {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.box h2 {
+    margin: 0;
+    color: black;
+}
+
+.box img {
+    min-width: 100%;
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: block;
+}
+
+.box h2 {
+    position: absolute;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    opacity: 0;
+}
+
+.box img, .box span, .box h2 {
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.box:hover img {
+    -webkit-transform: scale(1.2) rotate(2deg);
+            transform: scale(1.2) rotate(2deg);
+}
+
+.box:hover .overlay span {
+    opacity: 0.8;
+}
+
+.box:hover h2 {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+}
+
+.box, .col {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+@media screen and (min-width: 480px) {
+    .box {
+        width: 50%;
+    }
+
+    .wide {
+        width: 100%;
+    }
+
+    .col {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .box, .col {
+        width: 33.333%;
+    }
+
+    .col {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+
+    .col .box {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .wide {
+        width: 66.666%;
+    }
+}

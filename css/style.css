@@ -17,9 +17,15 @@ header{
 }
 header .wrapper {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 header #header-content{
@@ -44,14 +50,24 @@ header #header-content h1:after{
     max-width: 600px;
     /* border: 1px solid #fff;
     border-radius: 2px; */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 #contact div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     text-align: center;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 10px;
     width: 100%;
 }
@@ -71,8 +87,13 @@ header #header-content h1:after{
 }
 
 #about .wrapper{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 #about img{
@@ -81,8 +102,13 @@ header #header-content h1:after{
 }
 
 #about article{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-top: 30px;
 }
 
@@ -118,8 +144,13 @@ header #header-content h1:after{
 #slider .slider-inner{
     width: 100%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     overflow: hidden;
 }
 
@@ -130,10 +161,17 @@ header #header-content h1:after{
     background-repeat: no-repeat;
     position: relative;
     color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: slider 20s infinite;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-animation: slider 20s infinite;
+            animation: slider 20s infinite;
 }
 
 #slider article h1{
@@ -142,7 +180,8 @@ header #header-content h1:after{
 
 #slider article div{
     width: 95%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 #slider .slider-inner article:first-child{
@@ -162,6 +201,45 @@ header #header-content h1:after{
     padding: 10px;
     border-radius: 2px;
     position: absolute;
+}
+
+@-webkit-keyframes slider{
+    0% {
+        left: 0px;
+    }
+
+    12.5%{
+        left: 0px;
+    }
+
+    25%{
+        left: -100%;
+    }
+
+    37.5%{
+        left: -100%;
+    }
+
+    50%{
+        left: -200%;
+    }
+
+    62.5%{
+        left: -200%;
+    }
+
+    75.0%{
+        left: -100%;
+    }
+
+    87.5%{
+        left: -100%
+    }
+
+    100%{
+        left: 0;
+    }
+
 }
 
 @keyframes slider{
@@ -210,16 +288,21 @@ header #header-content h1:after{
 
 
 #news .news-container{
-    flex-direction: column;
-    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 #news .news-container>div{
-    width: 100%;
+    width: 100%
 }
 
 #news .news-container article{
     padding: 0;
+    height: 100%;
 }
 
 #news .content{
@@ -236,6 +319,7 @@ header #header-content h1:after{
 #news .image{
     overflow: hidden;
     width: 100%;
+    height: 200px;
 }
 
 #news .image img{
@@ -247,13 +331,28 @@ header #header-content h1:after{
 
 @media screen and (min-width: 480px) {
     #news .news-container{
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
     }
     #news .news-container>div{
         width: 50%;
     }
     #contact {
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+    }
+    #contact:before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        border-radius: 2px;
+        background-color: white;
+        margin-bottom: 10px;
     }
 
     #contact div {
@@ -280,7 +379,10 @@ header #header-content h1:after{
     }
 
     #about .wrapper{
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
     }
 
     #about .wrapper div, #about .wrapper article{
@@ -315,11 +417,12 @@ header #header-content h1:after{
     #slider .slider-inner article:last-child div{
         left: 50px;
         top: 200px;
-
     }
 
     #news .news-container>div{
         width: 25%;
-        height: 100%;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
     }
 }
