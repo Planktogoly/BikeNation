@@ -65,7 +65,7 @@ header #header-content h1:after{
     padding-bottom: 10px;
 }
 
-#contact span {
+#contact p {
     font-weight: 400;
     font-size: 13px;
 }
@@ -94,6 +94,7 @@ header #header-content h1:after{
 
 #about article li{
     padding: 5px 0;
+    font-weight: 400;
 }
 
 #about article li:first-child{
@@ -207,7 +208,50 @@ header #header-content h1:after{
     width: 100%;
 }
 
+
+#news .news-container{
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#news .news-container>div{
+    width: 100%;
+}
+
+#news .news-container article{
+    padding: 0;
+}
+
+#news .content{
+    padding: 20px;
+}
+
+#news .content h2 span{
+    background-color:#18BDD4;
+    padding: 2px;
+    border-radius: 2px;
+    color: white;
+}
+
+#news .image{
+    overflow: hidden;
+    width: 100%;
+}
+
+#news .image img{
+    width: 100%;
+    height: auto;
+}
+
+
+
 @media screen and (min-width: 480px) {
+    #news .news-container{
+        flex-direction: row;
+    }
+    #news .news-container>div{
+        width: 50%;
+    }
     #contact {
         flex-direction: row;
     }
@@ -230,7 +274,7 @@ header #header-content h1:after{
         font-size: 25px;
         padding-bottom: 20px;
     }
-    
+
     #contact span {
         font-size: 17px;
     }
@@ -259,7 +303,7 @@ header #header-content h1:after{
 
     #slider .slider-inner article:first-child div{
         left: 300px;
-        top: 100px;   
+        top: 100px;
     }
 
     #slider .slider-inner article:nth-child(2) div{
@@ -272,5 +316,10 @@ header #header-content h1:after{
         left: 50px;
         top: 200px;
 
+    }
+
+    #news .news-container>div{
+        width: 25%;
+        height: 100%;
     }
 }

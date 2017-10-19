@@ -55,7 +55,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-span, li, a, p, label, td, .button {
+li, a, p, label, td, .button {
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
     font-size: 15px;
@@ -229,7 +229,7 @@ nav #menu ol li:hover ol {
         width: auto;
         box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     }
-    
+
     nav #menu ol ol a {
         text-align: left;
         line-height: 40px;
