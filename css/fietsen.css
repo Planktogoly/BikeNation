@@ -53,12 +53,6 @@ table td:last-child {
 }
 
 .title{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     margin-bottom: 20px;
 }
 
@@ -107,9 +101,19 @@ table td:last-child {
     margin-right: 0px;
 }
 
-
 .stars .rated {
     background-color: #FFD700;
+}
+
+@media screen and (min-width: 480px) {
+    .title{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
 }
 
 @media screen and (min-width: 1024px) {
