@@ -33,7 +33,7 @@ header {
     width: 100%;
     margin: 0;
     padding: 0;
-    padding-top: 30px;
+    padding-bottom: 30px;
     text-align: left;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -47,8 +47,8 @@ header {
             align-items: flex-start;
 }
 
-.group .person:first-child{
-    padding-top: 0px
+.group .person:last-child{
+    padding-bottom: 0px
 }
 
 .person div {
