@@ -26,20 +26,15 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     top:0;
     left:0;
-}
-
-.box .overlay span {
-    background-color: #D9D6D6 ;
-    opacity: 0;
-    width: inherit;
-    height: inherit;
+    background-color: rgba(217, 214, 214, 0);
 }
 
 .box a {
@@ -52,29 +47,25 @@ header {
             box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-.box h2 {
-    margin: 0;
-    color: black;
-}
-
 .box img {
     min-width: 100%;
     width: 100%;
     min-height: 100%;
-    height: auto;
+    height: 100%;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     display: block;
 }
 
 .box h2 {
-    position: absolute;
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px);
     opacity: 0;
+    margin: 0;
+    color: black;
 }
 
-.box img, .box span, .box h2 {
+.box img, .box .overlay, .box h2 {
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
@@ -84,8 +75,8 @@ header {
             transform: scale(1.2) rotate(2deg);
 }
 
-.box:hover .overlay span {
-    opacity: 0.8;
+.box:hover .overlay {
+    background-color: rgba(217, 214, 214, .8);
 }
 
 .box:hover h2 {
@@ -128,8 +119,9 @@ header {
     }
 
     .col .box {
-        width: 100%;
         padding: 5px;
+        width: 100%;
+        height: 50%;
     }
 
     .wide {
