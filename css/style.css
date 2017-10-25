@@ -56,7 +56,8 @@ header #header-content h1:after{
         -ms-flex-direction: column;
             flex-direction: column;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
 }
 
 #contact div {
@@ -168,15 +169,15 @@ header #header-content h1:after{
 }
 
 #slider .slider-inner article:first-child{
-    background-image: url("https://source.unsplash.com/hI1DsDRJWvY");
+    background-image: url("../images/slider1.jpg");
 }
 
 #slider .slider-inner article:nth-child(2){
-    background-image: url("https://source.unsplash.com/o2FCfhNSjPo");
+    background-image: url("../images/slider2.jpg");
 }
 
 #slider .slider-inner article:last-child{
-    background-image: url("https://source.unsplash.com/Jj9dycup6HM");
+    background-image: url("../images/slider3.jpg");
 }
 
 #slider .slider-inner div{

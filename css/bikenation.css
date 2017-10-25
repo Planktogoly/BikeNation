@@ -10,7 +10,6 @@ body > section {
 
 body, html {
     background-color: #eee;
-    overflow-x: hidden;
 }
 
 .wrapper {

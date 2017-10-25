@@ -71,7 +71,9 @@ form .underline{
     border-radius: 2px;
     width: 100%;
     position: absolute;
-    transform: scale(0, 1);
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+    -webkit-transition: all 300ms;
     transition: all 300ms;
 }
 form textarea + .underline {
@@ -80,7 +82,8 @@ form textarea + .underline {
 
 form ul input:focus + .underline,
 textarea:focus + .underline {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
 }
 
 form ul #bericht {
@@ -94,6 +97,7 @@ form ul label{
     display:block;
     font-weight: bold;
     color: black;
+    -webkit-transition: all 300ms;
     transition: all 300ms
 }
 
@@ -141,6 +145,8 @@ aside {
 
 @media screen and (min-width: 480px) {
     .two-group{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
     form ul li div {
