@@ -41,6 +41,10 @@ form ul li div {
     position: relative;
 }
 
+form textarea{
+    display: block;
+}
+
 form ul input,
 form textarea {
     box-sizing: border-box;
@@ -78,7 +82,7 @@ form .underline{
     transition: all 300ms;
 }
 form textarea + .underline {
-    bottom: 2px;
+    bottom: 0px;
 }
 
 form ul input:focus + .underline,

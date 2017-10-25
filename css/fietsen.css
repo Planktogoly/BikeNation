@@ -1,3 +1,16 @@
+header#bakfiets{
+    background-image: url('../images/bakfiets_bikes.jpg');
+}
+header#elektrischefiets{
+    background-image: url('../images/elektrischefiets_bikes.jpg')
+}
+header#mountainbike{
+    background-image: url('../images/mountainbike_bikes.jpg')
+}
+header#omafiets{
+    background-image: url('../images/omafiets_bikes.jpg')
+}
+
 section .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
