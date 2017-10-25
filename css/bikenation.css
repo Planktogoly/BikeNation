@@ -345,10 +345,12 @@ nav #menu ol li:hover ol {
 }
 
 header {
-    position: relative;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
 
@@ -461,6 +463,6 @@ ul li {
     }
 
     .outside {
-        text-align: left;s
+        text-align: left;
     }
 }

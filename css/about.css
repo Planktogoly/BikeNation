@@ -74,7 +74,8 @@ header {
 
     .person img{
         width: 40%;
-        flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
     }
 }
 
