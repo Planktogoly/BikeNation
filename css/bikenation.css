@@ -346,6 +346,8 @@ nav #menu ol li:hover ol {
 
 header {
     position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
